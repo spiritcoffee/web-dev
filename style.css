@@ -49,3 +49,52 @@ body{
 .navbar a:hover {
   color: cyan;
 }
+.product-grid{
+     width:100%;
+     display:flex;
+     justify-content:space-evenly;
+     height:530px;
+     background-color: grey;
+}
+.product-grid img{
+     width:70%;
+     height:50%;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-card{
+     border:2px solid black;
+     width:25%;
+     background-color: rgba(19, 119, 101, 0.852);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.25); 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+.product-card h3{
+     text-align: center;
+     font-size: 25px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.product-card .btn.small {
+     
+  display: block;
+  width: 100%;
+  height:10%;
+  padding-top:10px;
+  border:2px solid black;
+  text-align: center;
+  text-decoration: none;
+  color:white;
+  background:rgb(53, 24, 97);
+}
+.product-card .btn.small:hover{
+     background:radial-gradient(rgb(255, 106, 0),rgb(53, 24, 97));
+}
+.price{
+     text-align:center;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size:25px;
+}
