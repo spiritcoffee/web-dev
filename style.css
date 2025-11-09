@@ -319,3 +319,23 @@ button.ghost {
   text-align: center;
 
 }
+.Cards_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+.carousel-inner {
+    height: 500px;       
+    border: 3px solid #00bfff;  
+    border-radius: 40px; 
+    overflow: hidden;   
+  
+}
+.carousel-inner img {
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    border-radius: 40px; 
+}
