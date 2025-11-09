@@ -5,10 +5,12 @@
   
   
 }
-body{
-     margin-top: 130px;
-}
 
+ body{
+  margin-top: 130px;
+  background: linear-gradient(135deg, #f7fcff 0%, #eaf2f8 100%);
+  font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+}
 
 .navbar {
   display: flex;
@@ -22,6 +24,7 @@ body{
   padding: 0 40px;
   height: 130px;
   z-index: 1000;
+  box-shadow: 0 2px 16px rgba(46,134,222,0.08);
 }
 
 .logo {
@@ -51,12 +54,14 @@ body{
   color: cyan;
 }
 #home {
-  padding: 60px 20px;
-  background-color: #fdfdfd;
-  text-align: left;
-  max-width: 1000px;
-  margin: auto;
+  padding: 64px 28px;
+  background-color: #e6fafe;
+  max-width: 1020px;
+  margin: 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(66,228,198,0.07);
 }
+
 
 #home h1 {
   font-size: 2rem;
@@ -78,75 +83,105 @@ body{
 }
 .feature-card img {
   width: 100%;
-  max-height: 160px;
-  object-fit: cover;
+  max-height: 200px;
+  object-fit: contain;
   border-radius: 6px;
   margin-bottom: 15px;
 }
-#products{
-  margin-top:100px;
-  padding:60px;
+#products {
+  margin-top: 100px;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0b0c10, #1f2833);
+  color: #c5c6c7;
+  text-align: center;
 }
-.product-grid{
-     width:100%;
-     display:flex;
-     justify-content:space-evenly;
-     height:650px;
-     background-color: grey;
+
+.product-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
 }
-.product-grid img{
-     width:70%;
-     height: 50%;
-     
-      display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .product-card {
-  border: 2px solid black;
-  width: 25%;
-  background-color: rgba(19, 119, 101, 0.852);
+  width: 28%;
+  background: #1f2833;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(102, 252, 241, 0.15);
+  border: 1px solid rgba(102, 252, 241, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ensures top and bottom spacing */
+  justify-content: space-between;
+  overflow: hidden;
 }
+
 .product-card:hover {
-  transform: scale(1.25); 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(102, 252, 241, 0.5);
 }
-.product-card h3{
-     text-align: center;
-     font-size: 25px;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.product-card .btn.small {
-     
-  display: block;
+
+.product-grid img {
   width: 100%;
-  height:10%;
-  padding-top:10px;
-  border:2px solid black;
+  height: 230px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(102, 252, 241, 0.3);
+}
+
+.product-card h3 {
+  color: #66fcf1;
   text-align: center;
-  text-decoration: none;
-  color:white;
-  background:rgb(53, 24, 97); 
-  margin-top: 23%;
-}
-.product-card .btn.small:hover{
-     background:radial-gradient(rgb(255, 106, 0),rgb(53, 24, 97));
-}
-.price{
-     text-align:center;
-     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-     font-size:25px;
+  font-size: 22px;
+  margin: 15px 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .product-card ul {
-     font-size: 20px;
-     margin-left: 10%;
-     line-height: 30px;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: left;
+  padding: 0 40px;
+  list-style-type: none;
 }
+
+.product-card ul li::before {
+  content: "✔";
+  color: #45a29e;
+  margin-right: 10px;
+}
+
+/* Price */
+.price {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #45a29e;
+  margin: 15px 0;
+}
+
+/* Buttons */
+.product-card .btn.small {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background: linear-gradient(90deg, #45a29e, #66fcf1);
+  color: #0b0c10;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-top: 2px solid rgba(102, 252, 241, 0.4);
+  transition: all 0.3s ease;
+}
+
+.product-card .btn.small:hover {
+  background: linear-gradient(90deg, #66fcf1, #45a29e);
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.6);
+}
+
 .register-section {
   padding: 50px 20px;
   background-color: #eaf2f8;
@@ -215,7 +250,7 @@ button.ghost {
 }
 
 .alert {
-  background-color: #fce4ec;
+  background-color: #ffe0e0;
   padding: 15px;
   border-radius: 6px;
   margin-bottom: 30px;
@@ -278,4 +313,9 @@ button.ghost {
 .links a:hover {
   transform: scale(1.1);
   background-color: #eaf2f8;
+}
+
+#sagi{
+  text-align: center;
+
 }
