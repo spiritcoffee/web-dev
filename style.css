@@ -454,18 +454,6 @@ main>h3{
   font-size: 1.6rem;
 }
 
-/* .Extensions{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: 2px solid #3498db;
-  padding: 10px 10px 20px 20px;
-  margin: 50px;
-  border-radius: 6px;
-  box-shadow: 4px 4px 5px #c5c6c7;
-  gap: 30px;
-} */
-
 .ext-card{
   display: flex;
   flex-direction: column;
@@ -496,7 +484,7 @@ main>h3{
 
 .bottom-container {
     display: flex;
-    justify-content: center;  /* centers horizontally */
+    justify-content: center; 
     padding: 20px;
 }
 
