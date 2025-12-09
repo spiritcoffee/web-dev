@@ -306,6 +306,16 @@ button.ghost {
   background-color: #eaf2f8;
 }
 
+#copyright{
+  display: flex;
+  align-items: center;
+  padding:20px;
+  font-size: 1.0rem;
+  background-color: navy;
+  color: #ffef99;
+  justify-content: center;
+}
+
 #sagi{
   text-align: center;
 
