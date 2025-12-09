@@ -1,210 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ProtecSure</title>
-<link rel="icon" href="/images/ProtecSure.jpg">
+  <link rel="icon" href="/images/ProtecSure.jpg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="icon" href="ProtecSure.png">
   <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
+  <style>
+    /* Small layout tweaks so React UI integrates with your page */
+    .register-wrapper { max-width: 720px; margin: 2.5rem auto; }
+    .modal-custom {
+      display: none;
+      position: fixed;
+      z-index: 1050;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-custom.show { display: flex; }
+    .modal-custom .modal-box {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    .table-wrapper { max-width: 720px; margin: 1rem auto 3rem; }
+  </style>
 </head>
 
 <body>
-
   <header>
-    <div class="navbar">
-      <img src="/images/black_logo.png" class="logo" alt="Logo">
-
-      <h1 class="site-title">
+    <div class="navbar d-flex align-items-center gap-3 p-3">
+      <img src="/images/black_logo.png" class="logo" alt="Logo" style="height:48px;">
+      <h1 class="site-title mb-0">
         <span style="color: blue;">Protec</span><span style="color: cyan;">Sure</span>
       </h1>
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
-        <li><a href="download.html">Download</a></li>
-      </ul>
+      <nav class="ms-auto">
+        <ul class="list-unstyled d-flex gap-3 mb-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plans.html">Plans</a></li>
+          <li><a href="download.html">Download</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-
   <main>
-    <img id="" src="" alt="">
-    <section id="home">
-
+    <section id="home" class="container mt-4">
       <h1>ProtecSure: The only sure thing in an unsure digital world.</h1>
-
       <p>Welcome to ProtecSure, the next-generation security suite that goes beyond antivirus. Our advanced AI
         proactively shields your devices, privacy, and identity from malware, ransomware, and the latest sophisticated
-        scams</p>
-      <div class="Cards_container">
+        scams.</p>
+
+      <div class="Cards_container d-flex gap-3 flex-wrap">
         <div class="card" style="width: 18rem;">
           <img height="240px" src="/images/antiscam.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">
             <h3>Defence against online scams</h3>
             <p>Continuous scanning and instant blocking of threats before they run</p>
-            </p>
           </div>
         </div>
-        <div height="200px" class="card" style="width: 18rem;">
+
+        <div class="card" style="width: 18rem;">
           <img src="/images/webphishing.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">
-            <h3>Anti-Phising & Web Protection</h3>
-            <p>actively blocks from visiting fake, fraudulent, and malicious websites designed to steal your data or
-              harm your computer</p>
-            </p>
+            <h3>Anti-Phishing & Web Protection</h3>
+            <p>Actively blocks fake, fraudulent, and malicious websites designed to steal your data or harm your computer</p>
           </div>
         </div>
+
         <div class="card" style="width: 18rem;">
           <img height="240px" src="/images/easy.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">
             <h3>Easy to use</h3>
-            <p>visually represents a complex task perfectly with just a single, effortless click</p>
-            </p>
+            <p>Visually represents a complex task perfectly with just a single, effortless click</p>
           </div>
         </div>
       </div>
     </section>
-    <div id="slideshow">
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/show_1.jpg" class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="images/show_2.jpg" class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="images/show_3.jpg" class="d-block w-100" alt="..." />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    </div>
-    <section id="Register" class="container register-section">
-      <h2>Register for Free Trial</h2>
-      <form class="register-form" action="#" method="post">
-        <div class="form-row">
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required>
-        </div>
 
-        <div class="form-row">
-          <label for="email">Email address</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+    <div id="slideshow" class="container mt-4">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
         </div>
-        <div class="form-row">
-          <button type="submit" class="btn primary">Start Free Trial</button>
-          <button type="reset" class="btn ghost">Reset</button>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/show_1.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/show_2.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/show_3.jpg" class="d-block w-100" alt="..." />
+          </div>
         </div>
-      </form>
-    </section>
-    <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h3>Thank you for registering!</h3>
-    <p>We'll contact you soon with trial access details.</p>
-  </div>
-</div>
-<div id="userTableContainer" style="display: none;" class="table-wrapper">
-  <h2>Registered Users</h2>
-  <table id="userTable" class="user-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</div>
-</div>
-<button id="toggleTableBtn" class="btn btn-secondary">Show User Table</button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
+    <!-- React root: replaces earlier JS features (form, modal, table, toggle) -->
+    <div id="react-root" class="register-wrapper"></div>
+
+    <!-- Rest of page content (testimonials, contact, footer) -->
+    <footer class="container mt-5">
+      <h2 id="sagi">What users say</h2>
+      <div class="testimonials">
+        <blockquote>“ProtecSure blocked a ransom attempt and restored my files — amazing!” <cite>— Shravanth Sagi</cite></blockquote>
+        <blockquote>“Lightweight and fast, no slowdown at all.” <cite>— Tarun Koneru</cite></blockquote>
+      </div>
+
+      <section id="contact" class="mt-4">
+        <h2>Contact</h2>
+        <section class="links d-flex gap-3">
+          <a href="mailto:yourname@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+        </section>
+      </section>
+
+      <section id="copyright" class="mt-4">
+        <p><b>&copy; 2025 ProtecSure. All rights reserved.</b></p>
+      </section>
+    </footer>
   </main>
-  <footer>
-   
-    <h2 id="sagi">What users say</h2>
-    <div class="testimonials">
-      <blockquote>
-        “ProtecSure blocked a ransom attempt and restored my files — amazing!” <cite>— Shravanth Sagi</cite>
-      </blockquote>
-      <blockquote>
-        “Lightweight and fast, no slowdown at all.” <cite>— Tarun Koneru</cite>
-      </blockquote>
-    </div>
-    <section id="contact">
-      <h2>Contact</h2>
-      <section class="links">
 
-        <a href="mailto:yourname@example.com" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.facebook.com/yourusername" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://twitter.com/yourusername" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/yourusername" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-  </footer>
-  <section id="copyright">
-      <p><b>&copy; 2025 ProtecSure. All rights reserved.</b></p>
-  </section>
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-</body>
 
+  <!-- React + ReactDOM + Babel (for JSX) -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- React app: implements all features from your original JS as React -->
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function ordinalSuffix(n) {
+      const s = ["th","st","nd","rd"];
+      const v = n % 100;
+      return (s[(v-20)%10] || s[v] || s[0]);
+    }
+
+    function App() {
+      const [name, setName] = useState('');
+      const [email, setEmail] = useState('');
+      const [users, setUsers] = useState([]);
+      const [showTable, setShowTable] = useState(false);
+      const [modalMessage, setModalMessage] = useState('');
+      const [showModal, setShowModal] = useState(false);
+
+      // load users from localStorage once
+      useEffect(() => {
+        try {
+          const stored = JSON.parse(localStorage.getItem('users') || '[]');
+          if (Array.isArray(stored)) setUsers(stored);
+        } catch (e) {
+          setUsers([]);
+        }
+      }, []);
+
+      // persist helper
+      function persist(next) {
+        localStorage.setItem('users', JSON.stringify(next));
+      }
+
+      function handleSubmit(e) {
+        e.preventDefault();
+        const n = (name || '').trim();
+        const em = (email || '').trim();
+        if (!n || !em) return;
+
+        const next = [...users, { name: n, email: em }];
+        setUsers(next);
+        persist(next);
+
+        const nth = next.length;
+        setModalMessage(`Congratulations🎉 — you are our ${nth}${ordinalSuffix(nth)} user!`);
+        setShowModal(true);
+
+        setName('');
+        setEmail('');
+        setShowTable(true);
+      }
+
+      function handleReset(e) {
+        // keep behavior consistent with original: alert on reset
+        setName('');
+        setEmail('');
+        alert('Form has been reset.');
+      }
+
+      function toggleTable() {
+        setShowTable(prev => !prev);
+      }
+
+      return (
+        <div>
+          <div className="card shadow-sm">
+            <div className="card-body">
+              <h2 className="card-title text-center mb-3">Register for Free Trial</h2>
+
+              <form className="register-form" onSubmit={handleSubmit} onReset={handleReset}>
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">Full name</label>
+                  <input id="name" name="name" type="text" className="form-control"
+                    placeholder="Your name" required value={name} onChange={e => setName(e.target.value)} />
+                </div>
+
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">Email address</label>
+                  <input id="email" name="email" type="email" className="form-control"
+                    placeholder="you@example.com" required value={email} onChange={e => setEmail(e.target.value)} />
+                </div>
+
+                <div className="d-flex justify-content-center gap-2">
+                  <button type="submit" className="btn btn-primary">Start Free Trial</button>
+                  <button type="reset" className="btn btn-outline-secondary">Reset</button>
+                </div>
+              </form>
+
+              <div className="text-center mt-3">
+                <button id="toggleTableBtn" className="btn btn-secondary btn-sm" onClick={toggleTable}>
+                  {showTable ? 'Hide User Table' : 'Show User Table'}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className={`table-wrapper mt-3 ${showTable ? '' : 'd-none'}`}>
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <h3 className="h6 text-center mb-3">Registered Users ({users.length})</h3>
+                <div className="table-responsive">
+                  <table id="userTable" className="table table-striped mb-0">
+                    <thead>
+                      <tr><th>Name</th><th>Email</th></tr>
+                    </thead>
+                    <tbody>
+                      {users.length === 0 ? (
+                        <tr><td colSpan="2" className="text-center text-muted">No users yet</td></tr>
+                      ) : users.map((u, idx) => (
+                        <tr key={idx}><td>{u.name}</td><td>{u.email}</td></tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Modal */}
+          <div className={`modal-custom ${showModal ? 'show' : ''}`} role="dialog" aria-modal={showModal}>
+            <div className="modal-box">
+              <button type="button" className="btn-close float-end" aria-label="Close"
+                onClick={() => setShowModal(false)}></button>
+              <h3>Thank you for registering!</h3>
+              <p>{modalMessage}</p>
+              <div className="text-end">
+                <button className="btn btn-primary" onClick={() => setShowModal(false)}>Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('react-root'));
+  </script>
+</body>
 </html>
