@@ -512,7 +512,7 @@ main>h3{
   font-size: 1em;
 }
 
-/* Privacy Policy Styles */
+
 .privacy-page {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
@@ -617,7 +617,6 @@ main>h3{
     text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .privacy-container {
         margin: 10px;

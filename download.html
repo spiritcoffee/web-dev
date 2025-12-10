@@ -98,6 +98,19 @@
       <p><b>&copy; 2025 ProtecSure. All rights reserved.</b></p>
   </section>
 </footer>
+<script>
+  document.querySelectorAll(".add-on").forEach(button => {
+    button.addEventListener("click", () => {
+      button.innerText = "Installing...";
+      button.disabled = true;
+
+      setTimeout(() => {
+        button.innerText = "Installed ✅";
+      }, 1200);
+    });
+  });
+</script>
+
 </body>
 </html>
 
