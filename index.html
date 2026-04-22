@@ -10,28 +10,224 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    .register-wrapper { max-width: 720px; margin: 2.5rem auto; }
+ <style>
+    /* --- FONTS & GLOBAL --- */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Chakra+Petch:wght@400;600&family=Inter:wght@400;700&display=swap');
+
+    *, body, html {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body { 
+      font-family: 'Inter', sans-serif !important; 
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #0a101f !important; 
+      border-bottom: 2px solid #00d4ff !important;
+      padding: 1rem 5% !important;
+      position: fixed !important;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
+    }
+    main { margin-top: 100px; }
+    .navbar ul {
+      display: flex !important;
+      list-style: none !important;
+      gap: 30px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: transparent !important;
+    }
+
+    .navbar ul li {
+      background-color: transparent !important;
+    }
+
+    .navbar ul li a {
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-family: 'Chakra Petch', sans-serif !important;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.3s ease;
+      background-color: transparent !important;
+    }
+
+    .navbar ul li a:hover { 
+      color: #00d4ff !important; 
+      text-shadow: 0 0 10px #00d4ff;
+    }
+    .card {
+      background-color: #050505 !important;
+      border: 3px solid #6366f1 !important; 
+      border-radius: 15px !important;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:nth-child(1) { border-color: #6366f1 !important; }
+    .card:nth-child(2) { border-color: #00d4ff !important; }
+    .card:nth-child(3) { border-color: #4f46e5 !important; }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.3) !important;
+      border-color: #ffffff !important;
+    }
+
+    .card-body {
+      background-color: transparent !important;
+      padding: 20px !important;
+    }
+    #toggleTableBtn {
+      background-color: #00d4ff !important;
+      color: #000000 !important;
+      border: none !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #6366f1, #00d4ff) !important;
+      border: none !important;
+      color: #000 !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 800;
+    }
     .modal-custom {
       display: none;
       position: fixed;
-      z-index: 1050;
-      left: 0; top: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.45);
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9) !important;
       align-items: center;
       justify-content: center;
     }
+
     .modal-custom.show { display: flex; }
-    .modal-custom .modal-box {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 480px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+    .modal-box {
+      background-color: #0a101f !important;
+      border: 2px solid #00d4ff !important;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 450px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
     }
-    .table-wrapper { max-width: 720px; margin: 1rem auto 3rem; }
-  </style>
+    .table-wrapper { background-color: #000000 !important; }
+    .table thead th {
+      background-color: #0a101f !important;
+      color: #00d4ff !important;
+      border-bottom: 2px solid #00d4ff !important;
+    }
+    h1 { font-family: 'Orbitron', sans-serif !important; color: #00d4ff !important; }
+    h2, h3 { font-family: 'Chakra Petch', sans-serif !important; color: #00d4ff !important; }
+    
+    /* --- CENTERED FOOTER & CONTACT --- */
+    footer, #contact {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      border-top: 2px solid #00d4ff !important; 
+      padding: 40px 0 !important;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center !important;
+      gap: 15px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* CIRCULAR CONTACT ICONS */
+    .links a { 
+      border: 2px solid #00d4ff !important; 
+      color: #00d4ff !important; 
+      background-color: transparent !important; 
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50% !important; /* Makes them circular */
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    
+    .links a:hover { background-color: #00d4ff !important; color: #000 !important; }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    #sagi {
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+
+    /* --- CENTER & SLIM REGISTRATION TILE --- */
+    #react-root {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      margin: 40px 0 !important;
+    }
+
+    #react-root > div {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #react-root .card {
+      width: 100% !important;
+      margin: 0 auto !important;
+      border-width: 2px !important;
+    }
+
+    #react-root .card-body {
+      padding: 1.5rem !important;
+    }
+
+    /* --- HOME ALIGNMENT --- */
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .Cards_container {
+      justify-content: center !important;
+    }
+</style>
 </head>
 
 <body class="page1">
@@ -129,7 +325,7 @@
 
       <section id="contact" class="mt-4">
         <h2>Contact</h2>
-        <section class="links d-flex gap-3">
+        <section class="links">
           <a href="mailto:yourname@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
           <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -152,19 +348,16 @@
     const { useState, useEffect } = React;
 
     function ordinalSuffix(n) {
-  const last = n % 10;
-  const lastTwo = n % 100;
-
-  if (lastTwo >= 11 && lastTwo <= 13) {
-    return "th";
-  }
-  switch (last) {
-    case 1: return "st";
-    case 2: return "nd";
-    case 3: return "rd";
-    default: return "th";
-  }
-}
+      const last = n % 10;
+      const lastTwo = n % 100;
+      if (lastTwo >= 11 && lastTwo <= 13) return "th";
+      switch (last) {
+        case 1: return "st";
+        case 2: return "nd";
+        case 3: return "rd";
+        default: return "th";
+      }
+    }
 
     function App() {
       const [name, setName] = useState('');
@@ -173,6 +366,7 @@
       const [showTable, setShowTable] = useState(false);
       const [modalMessage, setModalMessage] = useState('');
       const [showModal, setShowModal] = useState(false);
+
       useEffect(() => {
         try {
           const stored = JSON.parse(localStorage.getItem('users') || '[]');
@@ -207,7 +401,6 @@
       function handleReset(e) {
         setName('');
         setEmail('');
-        alert('Form has been reset.');
       }
 
       function toggleTable() {
