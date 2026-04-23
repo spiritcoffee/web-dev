@@ -54,7 +54,7 @@ export default function Download() {
             </div>
             <div className={styles.extRight}>
               <div className={styles.logoCircle}>
-                <img src="/images/ProtecSure.jpg" alt="Logo" />
+                <img src="/images/logo.png" alt="Logo" />
               </div>
             </div>
           </div>

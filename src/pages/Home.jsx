@@ -75,7 +75,7 @@ export default function Home() {
           <div className={styles.heroGrid}>
             <div className={styles.heroContent}>
               <div className={styles.badge}>
-                <span className={styles.badgeDot} /> AI-Powered Defense
+                <span className={styles.badgeDot} /> Advanced Defense
               </div>
               <h1 className={`gradient-text ${styles.title}`}>
                 The only security <br/> you'll ever need.
@@ -115,7 +115,7 @@ export default function Home() {
               <h2 className={styles.sectionTitle}>Real-time system integrity.</h2>
               <p className={styles.sectionSub}>Run our proprietary heuristic scanner directly in your browser. No installation required for immediate peace of mind.</p>
               <ul className={styles.checkList}>
-                <li><i className="fas fa-check-circle" /> Behavioral AI Analysis</li>
+                <li><i className="fas fa-check-circle" /> Behavioral Heuristic Analysis</li>
                 <li><i className="fas fa-check-circle" /> Memory Shielding v2</li>
                 <li><i className="fas fa-check-circle" /> Phishing Pattern Recognition</li>
               </ul>

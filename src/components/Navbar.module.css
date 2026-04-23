@@ -83,6 +83,7 @@
   border-radius: 100px;
   text-decoration: none;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .ctaBtn:hover {
@@ -90,8 +91,17 @@
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .siteTitle { display: none; }
   .navList { gap: 0; }
   .navLink { padding: 8px 12px; font-size: 0.75rem; }
+  .navbar { padding: 0 15px; width: 95%; }
+}
+
+@media (max-width: 600px) {
+  .nav { display: none; }
+  .ctaBtn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
 }
