@@ -65,4 +65,4 @@ GRANT ALL PRIVILEGES ON protecsure_db.* TO 'admin'@'localhost';
 - **Privacy**: Project-level data handling and security protocols.
 
 ---
-© 2025 ProtecSure Project · Final Year Documentation
+© 2025 ProtecSure Project · Final Documentation
